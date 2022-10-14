@@ -1,0 +1,207 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+body:before {
+	content: '';
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	background-size: cover;
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(10px);
+	filter: blur(10px);
+  background-image: url(https://media.istockphoto.com/photos/the-internet-makes-life-a-bit-more-simpler-picture-id1151170182?b=1&k=20&m=1151170182&s=170667a&w=0&h=fEOi0xQzk1MYtQnIvo47VT65eHrn0aFbm9y1tIh1b8s=); 
+}
+.reg-page {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	height: 350px;
+	padding: 80px 40px;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.reg-page h2 {
+	margin: 0;
+	padding: 0 0 20px;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+}
+.reg-page p {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color: #fff;
+}
+.reg-page input {
+	width: 100%;
+	margin-bottom: 20px;
+}
+.reg-page input[type=email], .login-page input[type=password] {
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+.submit {
+	height: 30px;
+	color: #fff;
+	font-size: 15px;
+	background: green;
+	cursor: pointer;
+	border-radius: 25px;
+	border: none;
+	outline: none;
+	margin-top: 4%;
+  text-align: center;
+}
+.reg-page a {
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/*login page section*/
+.login-page {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	height: 350px;
+	padding: 80px 40px;
+	background: rgba(0, 0, 0, 0.6);
+}
+.avatar {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	overflow: hidden;
+	top: calc(-80px/2);
+	left: 190px;
+}
+.login-page h2 {
+	margin: 0;
+	padding: 0 0 20px;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+}
+.login-page p {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color: #fff;
+}
+.login-page input {
+	width: 100%;
+	margin-bottom: 20px;
+}
+.login-page input[type=email], .login-page input[type=password] {
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+.login-page input[type=submit] {
+	height: 30px;
+	color: #fff;
+	font-size: 15px;
+	background: red;
+	cursor: pointer;
+	border-radius: 25px;
+	border: none;
+	outline: none;
+	margin-top: 15%;
+}
+.login-page a {
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+input[type=checkbox] {
+	width: 20%;
+}
+
+/*success page*/
+.box{
+  margin-top:60px;
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+}
+
+.alert{
+  margin-top:25px;
+  background-color:#fff;
+  font-size:25px;
+  font-family:sans-serif;
+  text-align:center;
+  width:300px;
+  height:100px;
+  padding-top: 150px;
+  position:relative;
+  border: 1px solid #efefda;
+  border-radius: 2%;
+  box-shadow:0px 0px 3px 1px #ccc;
+}
+
+.alert::before{
+  width:100px;
+  height:100px;
+  position:absolute;
+  border-radius: 100%;
+  inset: 20px 0px 0px 100px;
+  font-size: 60px;
+  line-height: 100px;
+  border : 5px solid gray;
+  animation-name: reveal;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+.alert>.alert-body{
+  opacity:0;
+  animation-name: reveal-message;
+  animation-duration:1s;
+  animation-timing-function: ease-out;
+  animation-delay:1.5s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes reveal-message{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+.success{
+  color:green;
+}
+
+.success::before{
+  content: '✓';
+  background-color: #eff;
+  box-shadow: 0px 0px 12px 7px rgba(200,255,150,0.8) inset;
+  border : 5px solid green;
+}
